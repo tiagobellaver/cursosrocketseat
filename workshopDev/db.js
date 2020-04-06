@@ -14,41 +14,14 @@ db.serialize(function() {
         );
     `);
 
-    //Inserir dado na tabela
-    const query = `INSERT INTO ideas(
-        image,
-        title,
-        category,
-        description,
-        link
-    ) VALUES(?, ?, ?, ?, ?);
-    `
-    const values = [
-        "https://image.flaticon.com/icons/svg/2729/2729007.svg",
-        "Cursos de Programação",
-        "Estudo",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam libero, magnam maxime sed impedit tempora consequuntur.",
-        "http://rocketseat.com.br"
-    ]
-
-    db.run(query, values, function(err) {
-        if (err) return console.log(err);
-
-        console.log(this);
-    });
-
-    //Consultar dados na tabela
-    db.all(`SELECT * FROM ideas`, function(err, rows) {
-        if (err) return console.log(err);
-
-        console.log(rows);
-    });
-
+    /*
     //Deletar um dado da tabela
     db.run(`DELETE FROM ideas WHERE id = ?`,[], function(err){
         if (err) return console.log(err)
 
         console.log("DELETEI", this);
-    });
+    });*/
 
 });
+
+module.exports = db;
