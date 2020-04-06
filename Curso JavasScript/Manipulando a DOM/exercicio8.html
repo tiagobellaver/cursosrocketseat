@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 8</title>
+</head>
+<body>
+
+    <ul></ul>
+
+    <script>
+        var nomes = ["Tiago", "Maria", "João"];
+        var listaElemento = document.querySelector('ul');
+
+        for (nome of nomes) {
+            var lisElement = document.createElement('li');
+            var textElement = document.createTextNode(nome);
+            lisElement.appendChild(textElement);
+            listaElemento.appendChild(lisElement);
+        }
+    </script>
+</body>
+</html>

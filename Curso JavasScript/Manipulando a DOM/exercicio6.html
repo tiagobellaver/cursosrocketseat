@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 6</title>
+</head>
+<body>
+    <button id="novo">Quadrado</button>
+    <div id="quadrado"></div>
+
+
+    <script>
+        var btnElement = document.getElementById('novo');
+        
+        var qddElement = document.getElementById('quadrado');
+
+        btnElement.onclick = function() {
+            var quadrado = document.createElement('div');
+            quadrado.style.width = '100px';
+            quadrado.style.height = '100px';
+            quadrado.style.backgroundColor = 'red';
+
+            qddElement.appendChild(quadrado);
+        };
+    </script>
+</body>
+</html>
